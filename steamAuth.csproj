@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>30a81db7-e20e-497d-927b-45186976fc30</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="path\**" />
+    <Content Remove="path\**" />
+    <EmbeddedResource Remove="path\**" />
+    <None Remove="path\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="SteamworksSharp" Version="1.0.8" />
+    <PackageReference Include="SteamworksSharp.Native.Linux_x64" Version="1.0.8" />
+    <PackageReference Include="SteamworksSharp.Native.Windows_x64" Version="1.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+   
+ <ItemGroup>
+	 <Content Include="C:\Users\rnjsd\source\repos\steamAuth\steamAuth\libsteam_api.so">
+			 <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	 </Content>
+</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="C:\Users\rnjsd\source\repos\steamAuth\steamAuth\steam_api.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="bin\Debug\net6.0\" />
+	</ItemGroup>
+</Project>
